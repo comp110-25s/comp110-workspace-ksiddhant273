@@ -1,9 +1,15 @@
 """File to define Bear class."""
 
+
 class Bear:
-    
-    def __init__(self):
-        return None
-    
+
+    def __init__(self, age: int = 0, hunger_score: int = 0):
+        self.age = age
+        self.hunger_score = hunger_score
+
     def one_day(self):
-        return None
+        self.age += 1
+        self.hunger_score -= 1
+
+    def eat(self, num_fish: int):
+        self.hunger_score += num_fish
